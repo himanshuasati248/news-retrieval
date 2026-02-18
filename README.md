@@ -23,18 +23,18 @@ select java 21 jdk
 
 <img width="1265" height="760" alt="image" src="https://github.com/user-attachments/assets/f33a44eb-5ab3-427d-8576-142c82fc81d1" />
 
-### 3. Configuration
+### 1. Configuration
 
 Update `configs/application.yml` with your settings:
 
 Set LLM key and model 
 
-### 5. Prompt
+### 2. Prompt
 In Prompt folder I have added 2 prompt
 1. query-analysis.txt : In this prompt analyze a user's news query
 2. articial-summary.txt: In this generating summary for articial 
 
-### 6. Build and Run
+### 3. Build and Run
 
 ```bash
 # Build the project
