@@ -29,7 +29,12 @@ Update `configs/application.yml` with your settings:
 
 Set LLM key and model 
 
-### 4. Build and Run
+### 5. Prompt
+In Prompt folder I have added 2 prompt
+1. query-analysis.txt : In this prompt analyze a user's news query
+2. articial-summary.txt: In this generating summary for articial 
+
+### 6. Build and Run
 
 ```bash
 # Build the project
@@ -110,10 +115,6 @@ curl "http://localhost:9097/api/v1/news/nearby?lat=40.7128&lon=-74.0060"
 ```bash
 curl "http://localhost:9097/api/v1/news/trending?lat=40.7128&lon=-74.0060&limit=10"
 
-##Prompt
-In Prompt folder I have added 2 prompt
-1. query-analysis.txt : In this prompt analyze a user's news query
-2. articial-summary.txt: In this generating summary for articial 
 
 ## Data Models
 
