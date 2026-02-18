@@ -37,7 +37,7 @@ spring:
 
 # OpenAI Configuration
 openai:
-  api-key: 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
+  api-key: hf_wUvERyBgGZVoeJqkeOdbA
   model: meta-llama/Llama-3.1-8B-Instruct:novita
   base-url: https://router.huggingface.co/v1
   temp: 0.7
