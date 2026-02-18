@@ -34,7 +34,10 @@ In Prompt folder I have added 2 prompt
 1. query-analysis.txt : In this prompt analyze a user's news query
 2. articial-summary.txt: In this generating summary for articial 
 
-### 3. Build and Run
+### 3. Test Cases
+I have attached test case screenshot in test_image folder
+
+### 4. Build and Run
 
 ```bash
 # Build the project
@@ -140,6 +143,3 @@ curl "http://localhost:9097/api/v1/news/trending?lat=40.7128&lon=-74.0060&limit=
 - `eventType` - Event type (VIEW: 1.0, CLICK: 3.0, SHARE: 5.0 weight)
 - `latitude`, `longitude` - Event location
 - `createdAt` - Event timestamp
-
-## Test Cases
-I have attached test case screenshot
