@@ -1,0 +1,72 @@
+server.port: 9097
+
+spring:
+  application:
+    name: news-retrieval
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/newsdb
+    username: news
+    password: news123
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    open-in-view: false
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: my-redis
+      timeout: 5000
+
+# OpenAI Configuration
+openai:
+  api-key: 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
+  model: meta-llama/Llama-3.1-8B-Instruct:novita
+  base-url: https://router.huggingface.co/v1
+  temp: 0.7
+  #   api-key: e100ce6c397f41baa5cf0448c5102c3b
+  #   model: gpt-4o-mini-2
+  #   base-url: https://ds-southindia.openai.azure.com
+
+prompts:
+  base-path: prompts
+  query-analysis-file: query-analysis.txt
+  article-summary-file: article-summary.txt
+
+news:
+  data-file: classpath:news_data.json
+  data-source: file
+  radius-km: 50.0
+  threshold-value: 0.7
+  batch-size: 500
+  fetch-record-limit: 5
+  s3:
+    bucket-name:
+    key:
+    region:
+  trending:
+    scheduler-interval-ms: 600000
+    cache-ttl-minutes: 10
+
+#logging:
+#  level:
+#    com.news.retrieval: DEBUG
+#    org.hibernate.SQL: WARN
+#    org.hibernate.type.descriptor.sql.BasicBinder: WARN
